@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="GOSnake.cpp">
+      <Filter>Snake</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="duktape.c">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="GameTimeline.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="json.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="RealTimeline.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptManager.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Timeline.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="Variant.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="variantENUM.cpp">
+      <Filter>Zzyzix</Filter>
+    </ClCompile>
+    <ClCompile Include="COMPSnake.cpp">
+      <Filter>Snake</Filter>
+    </ClCompile>
+    <ClCompile Include="LISTENERSnake.cpp">
+      <Filter>Snake</Filter>
+    </ClCompile>
+    <ClCompile Include="LISTENERGameOver.cpp">
+      <Filter>Snake</Filter>
+    </ClCompile>
+    <ClCompile Include="GOGameOver.cpp">
+      <Filter>Snake</Filter>
+    </ClCompile>
+    <ClCompile Include="GOApple.cpp">
+      <Filter>Snake</Filter>
+    </ClCompile>
+    <ClCompile Include="LISTENERApple.cpp">
+      <Filter>Snake</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GOSnake.h">
+      <Filter>Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="duk_config.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="duktape.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimeline.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="json.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="RealTimeline.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptManager.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Timeline.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="Variant.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="variantENUM.h">
+      <Filter>Zzyzix</Filter>
+    </ClInclude>
+    <ClInclude Include="COMPSnake.h">
+      <Filter>Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="LISTENERSnake.h">
+      <Filter>Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="LISTENERGameOver.h">
+      <Filter>Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="GOGameOver.h">
+      <Filter>Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="GOApple.h">
+      <Filter>Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="LISTENERApple.h">
+      <Filter>Snake</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Snake">
+      <UniqueIdentifier>{41ee517b-ec2f-4a03-a788-9f56889038e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zzyzix">
+      <UniqueIdentifier>{d4a5db34-6ed7-4e09-9974-4396366b88a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{40e79969-6359-438a-85a3-ee9ff705e5b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Snake Game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="scriptTest.js">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
