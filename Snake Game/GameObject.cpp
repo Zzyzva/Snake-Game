@@ -45,7 +45,7 @@
 
 
 	void GameObject::addComponent(Component* c) {
-		components.push_back(c);
+	components.push_back(c);
 	}
 
 	void GameObject::update(long currentTime, long deltaTime, Scene* scene, EventManager* manager) {

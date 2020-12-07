@@ -5,7 +5,7 @@
 #include "Server.h"
 
 int main() {
-	std::cout << "Press c for Client!\nPress s for Server:\n";
+	std::cout << "Press c for Client ( jack )\nPress s for Server:\n";
 	char command;
 	std::cin >> command;
 	if (command == 'c') {
