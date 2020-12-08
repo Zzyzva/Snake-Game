@@ -19,8 +19,8 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
 
 
     //Calcualte new position
-    float tempx = self->velocity.x * self->speed + self->collider->getX();
-    float tempy = -self->velocity.y * self->speed + self->collider->getY();
+    float tempx = self->velocity.x * self->speed * deltaTime + self->collider->getX() ;
+    float tempy = -self->velocity.y * self->speed * deltaTime + self->collider->getY();
 
 
     //Raise event to move ship 

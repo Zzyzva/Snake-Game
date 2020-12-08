@@ -6,10 +6,14 @@ PlayerShip_BattleMap_GO::PlayerShip_BattleMap_GO(Scene* scene, int id, int x, in
     this->scene = scene;
     this->id = id;
     collider = new Collider(x, y, SPRITE_SIZE, SPRITE_SIZE, true);
+
+    //Set Sprite
     sf::RectangleShape* render = new sf::RectangleShape();
     if (!ship_texture.loadFromFile("Resources\\Pirates\\PlayerShip_BattleMap_Sprite.png")) {
         std::cout << "Failed to load ship texture";
     }
+
+    
     render->setTexture(&ship_texture);
     render->setPosition(x, y);
     render->setSize(sf::Vector2f(SPRITE_SIZE, SPRITE_SIZE));
