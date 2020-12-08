@@ -15,6 +15,8 @@ class PlayerShip_BattleMap_GO : public GameObject
     
 public:
     int angle = 180;
+    float speed = 1;
+    Point velocity;
 
     PlayerShip_BattleMap_GO(Scene* scene, int id, int x, int y);
 };

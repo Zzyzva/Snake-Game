@@ -6,6 +6,7 @@ PlayerShip_BattleMap_EH::PlayerShip_BattleMap_EH(Scene* scene, PlayerShip_Battle
 
     scene->eventManager->registerHandler("ADown", this);
     scene->eventManager->registerHandler("DDown", this);
+    scene->eventManager->registerHandler("PlayerShip_BattleMap_Move", this);
 }
 
 void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
@@ -20,6 +21,20 @@ void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
         if (self->angle >= 360) {
             self->angle = 0;
         }
+    }
+    else if (e->getName().compare("PlayerShip_BattleMap_Move") == 0) {
+        float x = 0;
+        float y = 0;
+        std::vector<Variant*>* list = e->getParams();
+        for (Variant* v : *list) {
+            if (v->name.compare("x") == 0) {
+                x = v->f;
+            }
+            else if (v->name.compare("y") == 0) {
+                y = v->f;
+            }
+        }
+        self->collider->setPosition(x, y);
     }
 
 }

@@ -92,7 +92,7 @@ void Client::client(){
     InputManager* inputManager = new InputManager(scene, &focus);
 
     //Declare the window
-    sf::RenderWindow window(sf::VideoMode(400, 400), "Game!");
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Game!");
 
 
 

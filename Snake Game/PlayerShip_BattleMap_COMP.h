@@ -12,6 +12,9 @@ class PlayerShip_BattleMap_COMP : public Component
 
     Scene* scene;
     PlayerShip_BattleMap_GO* self;
+
+
+
 public:
 
     PlayerShip_BattleMap_COMP(Scene* scene, PlayerShip_BattleMap_GO* self);

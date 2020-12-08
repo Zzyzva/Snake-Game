@@ -6,8 +6,8 @@
 */
 class Collider
 {
-	int posX; //Left X
-	int posY; //Top Y
+	float posX; //Left X
+	float posY; //Top Y
 	int height;
 	int width;
 	bool solid;
@@ -18,7 +18,7 @@ class Collider
 	float yAdjust = 0;
 
 public:
-	Collider(int x, int y, int width, int height, bool solid) {
+	Collider(float x, float y, int width, int height, bool solid) {
 		this->posX = x;
 		this->posY = y;
 		this->solid = solid;
@@ -54,32 +54,32 @@ public:
 		width = w;
 	}
 
-	void setPosition(int x, int y) {
+	void setPosition(float x, float y) {
 		this->posX = x;
 		this->posY = y;
 	}
 
-	int getLeft() {
+	float getLeft() {
 		return posX;
 	}
 
-	int getX() {
+	float getX() {
 		return posX;
 	}
 	
-	int getTop() {
+	float getTop() {
 		return posY;
 	}
 
-	int getY() {
+	float getY() {
 		return posY;
 	}
 
-	int getRight() {
+	float getRight() {
 		return posX + width;
 	}
 
-	int getBottom() {
+	float getBottom() {
 		return posY + height;
 	}
 
