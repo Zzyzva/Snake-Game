@@ -82,8 +82,16 @@
     <ClCompile Include="LISTENERApple.cpp">
       <Filter>Snake</Filter>
     </ClCompile>
-    <ClCompile Include="PiratesClient.cpp" />
-    <ClCompile Include="PlayerShip_BattleMap_GO.cpp" />
+    <ClCompile Include="PlayerShip_BattleMap_GO.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
+    <ClCompile Include="PiratesClient.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerShip_BattleMap_COMP.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerShip_BattleMap_EH.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -171,8 +179,16 @@
     <ClInclude Include="LISTENERApple.h">
       <Filter>Snake</Filter>
     </ClInclude>
-    <ClInclude Include="PiratesClient.h" />
-    <ClInclude Include="PlayerShip_BattleMap_GO.h" />
+    <ClInclude Include="PlayerShip_BattleMap_GO.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
+    <ClInclude Include="PiratesClient.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerShip_BattleMap_COMP.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerShip_BattleMap_EH.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Snake">
