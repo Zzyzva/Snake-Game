@@ -91,7 +91,9 @@
     <ClCompile Include="PlayerShip_BattleMap_COMP.cpp">
       <Filter>Pirates</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerShip_BattleMap_EH.cpp" />
+    <ClCompile Include="PlayerShip_BattleMap_EH.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -188,7 +190,9 @@
     <ClInclude Include="PlayerShip_BattleMap_COMP.h">
       <Filter>Pirates</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerShip_BattleMap_EH.h" />
+    <ClInclude Include="PlayerShip_BattleMap_EH.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Snake">

@@ -108,20 +108,72 @@ void InputManager::checkInput(long time) {
         PPressed = false;
     }
 
+    //W KEY
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && *focus)
+    {
+        if (WPressed == false) {
+            Event* e = new Event("WPressed", time, scene->eventManager->id);
+            scene->eventManager->raise(e);
+            WPressed = true;
+        }
+    }
+    else {
+        WPressed = false;
+    }
+
+    //A KEY
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && *focus)
+    {
+        if (APressed == false) {
+            Event* e = new Event("APressed", time, scene->eventManager->id);
+            scene->eventManager->raise(e);
+            APressed = true;
+        }
+    }
+    else {
+        APressed = false;
+    }
+
+    //S KEY
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && *focus)
+    {
+        if (SPressed == false) {
+            Event* e = new Event("SPressed", time, scene->eventManager->id);
+            scene->eventManager->raise(e);
+            SPressed = true;
+        }
+    }
+    else {
+        SPressed = false;
+    }
+
+    //D KEY
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) && *focus)
+    {
+        if (DPressed == false) {
+            Event* e = new Event("DPressed", time, scene->eventManager->id);
+            scene->eventManager->raise(e);
+            DPressed = true;
+        }
+    }
+    else {
+        DPressed = false;
+    }
+
 
     //THE FOLLOWING KEYS SEND CONSTANT EVENTS
 
     //D KEY
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) && *focus)
     {
-        Event* e = new Event("DPressed", time, scene->eventManager->id);
+        Event* e = new Event("DDown", time, scene->eventManager->id);
         scene->eventManager->raise(e);
     }
 
     //A KEY
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && *focus)
     {
-        Event* e = new Event("APressed", time, scene->eventManager->id);
+        Event* e = new Event("ADown", time, scene->eventManager->id);
         scene->eventManager->raise(e);
     }
 }

@@ -7,5 +7,6 @@ PlayerShip_BattleMap_COMP::PlayerShip_BattleMap_COMP(Scene* scene, PlayerShip_Ba
 }
 
 void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
+    self->render->setRotation(self->angle);
 
 }

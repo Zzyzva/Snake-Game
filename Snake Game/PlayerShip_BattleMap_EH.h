@@ -4,6 +4,8 @@
 
 #include "PlayerShip_BattleMap_GO.h"
 
+class PlayerShip_BattleMap_GO;
+
 class PlayerShip_BattleMap_EH : public EventHandler
 {
 public:

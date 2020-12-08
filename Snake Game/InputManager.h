@@ -17,6 +17,10 @@ class InputManager
 	bool spacePressed = false;
 	bool PPressed = false;
 	bool upPressed = false;
+	bool APressed = false;
+	bool DPressed = false;
+	bool WPressed = false;
+	bool SPressed = false;
 public:
 
 	//Creates the manager
