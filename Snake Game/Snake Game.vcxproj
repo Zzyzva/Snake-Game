@@ -172,6 +172,8 @@
     <ClCompile Include="LISTENERGameOver.cpp" />
     <ClCompile Include="LISTENERSnake.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PiratesClient.cpp" />
+    <ClCompile Include="PlayerShip_BattleMap_GO.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RealTimeline.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -202,6 +204,8 @@
     <ClInclude Include="LISTENERGameOver.h" />
     <ClInclude Include="LISTENERSnake.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="PiratesClient.h" />
+    <ClInclude Include="PlayerShip_BattleMap_GO.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="RealTimeline.h" />
     <ClInclude Include="resource.h" />

@@ -82,6 +82,8 @@
     <ClCompile Include="LISTENERApple.cpp">
       <Filter>Snake</Filter>
     </ClCompile>
+    <ClCompile Include="PiratesClient.cpp" />
+    <ClCompile Include="PlayerShip_BattleMap_GO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -169,6 +171,8 @@
     <ClInclude Include="LISTENERApple.h">
       <Filter>Snake</Filter>
     </ClInclude>
+    <ClInclude Include="PiratesClient.h" />
+    <ClInclude Include="PlayerShip_BattleMap_GO.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Snake">
@@ -179,6 +183,9 @@
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{40e79969-6359-438a-85a3-ee9ff705e5b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pirates">
+      <UniqueIdentifier>{eedca60b-44bd-4249-bb89-b90459268853}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

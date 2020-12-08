@@ -23,6 +23,7 @@ public:
 	sf::Shape* render;
 	std::list<Component*> components;
 	bool serverSync = true;
+	Scene* scene;
 
 	
 	~GameObject();

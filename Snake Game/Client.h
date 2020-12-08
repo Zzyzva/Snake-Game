@@ -20,6 +20,8 @@
 #include "GOApple.h"
 #include "LISTENERGameOver.h"
 
+#include "PiratesClient.h"
+
 
 using json = nlohmann::json;
 

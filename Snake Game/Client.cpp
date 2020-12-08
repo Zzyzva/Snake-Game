@@ -96,10 +96,16 @@ void Client::client(){
 
 
 
+    
+    PiratesClient::piratesSetup(scene);
+
+
     //Setup Snake scene
+    /**
     scene->addObject(new GOSnake(scene, 0, 3, 200, 200), 0);
     scene->addObject(new GOApple(scene, 4, 300, 300), 4);
     new LISTENERGameOver(scene);
+    */
 
 
 
