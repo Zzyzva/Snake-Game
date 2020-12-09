@@ -27,4 +27,7 @@ PlayerShip_BattleMap_GO::PlayerShip_BattleMap_GO(Scene* scene, int id, int x, in
 
     velocity.x = 0;
     velocity.y = 0;
+
+    target.x = 0;
+    target.y = 0;
 }

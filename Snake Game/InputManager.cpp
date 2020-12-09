@@ -6,7 +6,7 @@ InputManager::InputManager(Scene* scene, bool* focus) {
     this->focus = focus;
 }
 
-void InputManager::checkInput(long time) {
+void InputManager::checkInput(long time, sf::RenderWindow& window) {
 
     //THE FOLLOWING KEYS SEND ONE EVENT
 
@@ -175,6 +175,30 @@ void InputManager::checkInput(long time) {
     {
         Event* e = new Event("ADown", time, scene->eventManager->id);
         scene->eventManager->raise(e);
+    }
+
+    //MOUSE EVENTS
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && *focus)
+    {
+        if (mouseLeftPressed == false) {
+            mouseLeftPressed = true;
+            sf::Vector2i position = sf::Mouse::getPosition(window);
+            float x = position.x;
+            float y = position.y;
+
+            Event* e = new Event("MouseLeftPressed", time, scene->id);
+            Variant* v1 = new Variant("x", VFLOAT);
+            v1->f = x;
+            e->addParam(v1);
+            Variant* v2 = new Variant("y", VFLOAT);
+            v2->f = y;
+            e->addParam(v2);
+            scene->eventManager->raise(e);
+        }
+        
+    }
+    else {
+        mouseLeftPressed = false;
     }
 }
 

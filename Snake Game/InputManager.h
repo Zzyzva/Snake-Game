@@ -21,13 +21,16 @@ class InputManager
 	bool DPressed = false;
 	bool WPressed = false;
 	bool SPressed = false;
+
+	bool mouseLeftPressed = false;
+
 public:
 
 	//Creates the manager
 	InputManager(Scene* scene, bool* focus);
 
 	//Checks for input, called every loop
-	void checkInput(long time);
+	void checkInput(long time, sf::RenderWindow& window);
 
 	void updateScene(Scene* scene);
 };

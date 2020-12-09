@@ -116,7 +116,7 @@ void Client::client(){
         gameLoopReady = true;
         gameLoopCV.notify_all();
         //Check for input
-        inputManager->checkInput(time);
+        inputManager->checkInput(time, window);
 
         //Recieve message from server
         zmq::message_t serverEventMessage;

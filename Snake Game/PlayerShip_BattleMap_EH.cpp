@@ -7,6 +7,9 @@ PlayerShip_BattleMap_EH::PlayerShip_BattleMap_EH(Scene* scene, PlayerShip_Battle
     scene->eventManager->registerHandler("ADown", this);
     scene->eventManager->registerHandler("DDown", this);
     scene->eventManager->registerHandler("PlayerShip_BattleMap_Move", this);
+    scene->eventManager->registerHandler("MouseLeftPressed", this);
+
+    
 }
 
 void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
@@ -33,8 +36,25 @@ void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
             else if (v->name.compare("y") == 0) {
                 y = v->f;
             }
+            
         }
         self->collider->setPosition(x, y);
+    }
+    else if (e->getName().compare("MouseLeftPressed") == 0) {
+        float x = 0;
+        float y = 0;
+        std::vector<Variant*>* list = e->getParams();
+        for (Variant* v : *list) {
+            if (v->name.compare("x") == 0) {
+                x = v->f;
+            }
+            else if (v->name.compare("y") == 0) {
+                y = v->f;
+            }
+        }
+        self->target.x = x;
+        self->target.y = y;
+        self->targeting = true;
     }
 
 }

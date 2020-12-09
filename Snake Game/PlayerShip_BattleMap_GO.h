@@ -17,6 +17,8 @@ public:
     int angle = 180;
     float speed = 1;
     Point velocity;
+    Point target;
+    bool targeting = false;
 
     PlayerShip_BattleMap_GO(Scene* scene, int id, int x, int y);
 };
