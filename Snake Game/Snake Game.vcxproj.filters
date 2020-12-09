@@ -94,6 +94,15 @@
     <ClCompile Include="PlayerShip_BattleMap_EH.cpp">
       <Filter>Pirates</Filter>
     </ClCompile>
+    <ClCompile Include="EnemyShip_BattleMap_COMP.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyShip_BattleMap_EH.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyShip_BattleMap_GO.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -191,6 +200,15 @@
       <Filter>Pirates</Filter>
     </ClInclude>
     <ClInclude Include="PlayerShip_BattleMap_EH.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyShip_BattleMap_COMP.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyShip_BattleMap_EH.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyShip_BattleMap_GO.h">
       <Filter>Pirates</Filter>
     </ClInclude>
   </ItemGroup>

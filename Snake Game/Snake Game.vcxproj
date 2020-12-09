@@ -158,6 +158,9 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="COMPSnake.cpp" />
     <ClCompile Include="duktape.c" />
+    <ClCompile Include="EnemyShip_BattleMap_COMP.cpp" />
+    <ClCompile Include="EnemyShip_BattleMap_EH.cpp" />
+    <ClCompile Include="EnemyShip_BattleMap_GO.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventHandler.cpp" />
     <ClCompile Include="EventManager.cpp" />
@@ -192,6 +195,9 @@
     <ClInclude Include="COMPSnake.h" />
     <ClInclude Include="duktape.h" />
     <ClInclude Include="duk_config.h" />
+    <ClInclude Include="EnemyShip_BattleMap_COMP.h" />
+    <ClInclude Include="EnemyShip_BattleMap_EH.h" />
+    <ClInclude Include="EnemyShip_BattleMap_GO.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="EventManager.h" />
