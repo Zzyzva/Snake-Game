@@ -14,7 +14,6 @@ LISTENERSnake::LISTENERSnake(Scene* scene, GOSnake* self) {
 	scene->eventManager->registerHandler("RightPressed", this);
 
 
-	dukglue_register_method(scene->scripter->getContext(), &GOSnake::grow, "grow");
 
 }
 
@@ -36,19 +35,6 @@ void LISTENERSnake::handleEvent(Event* e) {
 	}
 
 
-	if (e->getName().compare("AppleHit") == 0) {
-		scene->scripter->loadScript("scriptTest.js");
-		duk_get_prop_string(scene->scripter->getContext(), -1, "helloWorld");
-		dukglue_push(scene->scripter->getContext(), self);
-		if (duk_pcall(scene->scripter->getContext(), 1) != 0)
-		{
-			std::cout << "Error: ";
-		}
-		//std::cout << duk_safe_to_string(scene->scripter->getContext(), -1) << std::endl;
-		duk_pop(scene->scripter->getContext());
-		
-		//self->grow();
-	}
 
 	if (e->getName().compare("UpPressed") == 0) {
 		if (self->direction != 2) {

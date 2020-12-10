@@ -158,7 +158,6 @@
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="COMPSnake.cpp" />
-    <ClCompile Include="duktape.c" />
     <ClCompile Include="EnemyShip_BattleMap_COMP.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_EH.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_GO.cpp" />
@@ -183,7 +182,6 @@
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RealTimeline.cpp" />
     <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="ScriptManager.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="Timeline.cpp" />
     <ClCompile Include="Variant.cpp" />
@@ -195,8 +193,6 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="COMPSnake.h" />
-    <ClInclude Include="duktape.h" />
-    <ClInclude Include="duk_config.h" />
     <ClInclude Include="EnemyShip_BattleMap_COMP.h" />
     <ClInclude Include="EnemyShip_BattleMap_EH.h" />
     <ClInclude Include="EnemyShip_BattleMap_GO.h" />
@@ -222,7 +218,6 @@
     <ClInclude Include="RealTimeline.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Scene.h" />
-    <ClInclude Include="ScriptManager.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="Timeline.h" />
     <ClInclude Include="Variant.h" />

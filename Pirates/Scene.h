@@ -3,8 +3,7 @@
 #include "GameObject.h"
 #include "EventManager.h"
 #include "Point.h"
-#include "ScriptManager.h"
-#include "dukglue/dukglue.h"
+
 
 class GameObject;
 class Component;
@@ -24,7 +23,6 @@ public:
 	int playbackXAdjust = 0;
 	int totalID = 0;
 
-	ScriptManager* scripter;
 	EventManager* eventManager;
 
 	Scene* nextScene;

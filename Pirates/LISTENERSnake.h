@@ -2,7 +2,6 @@
 #include "EventHandler.h"
 #include "Scene.h"
 #include "GOSnake.h"
-#include "dukglue/dukglue.h"
 
 class GOSnake;
 

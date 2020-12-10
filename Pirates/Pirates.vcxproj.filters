@@ -13,9 +13,6 @@
     <ClCompile Include="Component.cpp">
       <Filter>Zzyzix</Filter>
     </ClCompile>
-    <ClCompile Include="duktape.c">
-      <Filter>Zzyzix</Filter>
-    </ClCompile>
     <ClCompile Include="Event.cpp">
       <Filter>Zzyzix</Filter>
     </ClCompile>
@@ -47,9 +44,6 @@
       <Filter>Zzyzix</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>Zzyzix</Filter>
-    </ClCompile>
-    <ClCompile Include="ScriptManager.cpp">
       <Filter>Zzyzix</Filter>
     </ClCompile>
     <ClCompile Include="Server.cpp">
@@ -120,12 +114,6 @@
     <ClInclude Include="Component.h">
       <Filter>Zzyzix</Filter>
     </ClInclude>
-    <ClInclude Include="duk_config.h">
-      <Filter>Zzyzix</Filter>
-    </ClInclude>
-    <ClInclude Include="duktape.h">
-      <Filter>Zzyzix</Filter>
-    </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Zzyzix</Filter>
     </ClInclude>
@@ -157,9 +145,6 @@
       <Filter>Zzyzix</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>Zzyzix</Filter>
-    </ClInclude>
-    <ClInclude Include="ScriptManager.h">
       <Filter>Zzyzix</Filter>
     </ClInclude>
     <ClInclude Include="Server.h">

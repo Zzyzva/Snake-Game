@@ -8,7 +8,6 @@ Scene::Scene(int id, int width, int height) {
 	objects = new std::map<int, GameObject*>;
 	xAdjust = 0;
 	this->id = id;
-	scripter = new ScriptManager();
 	eventManager = new EventManager(id);
 	
 }
@@ -18,7 +17,6 @@ Scene::~Scene() {
 		GameObject* o = entry.second;
 		delete o;	
 	}
-	delete scripter;
 	delete eventManager;
 	delete objects;
 }
