@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Battle_GUI_GO.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -189,6 +190,7 @@
     <ClCompile Include="variantENUM.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Battle_GUI_GO.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />

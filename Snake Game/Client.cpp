@@ -172,7 +172,7 @@ void Client::client(){
 
 
         //Draw out objects
-        window.clear(sf::Color(34,139,34));
+        window.clear(sf::Color(0,0,255));
         for (auto entry : *scene->getObjects()) {
             GameObject* o = entry.second;
             o->draw(&window);

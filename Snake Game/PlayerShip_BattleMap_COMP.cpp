@@ -59,10 +59,7 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
 
 
         
-        
-
-
-        std::cout << actualTemp << " " << std::endl;
+       
 
         self->angle += angleChange;
         if (self->angle >= 360) {

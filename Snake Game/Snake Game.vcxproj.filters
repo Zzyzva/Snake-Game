@@ -103,6 +103,9 @@
     <ClCompile Include="EnemyShip_BattleMap_GO.cpp">
       <Filter>Pirates</Filter>
     </ClCompile>
+    <ClCompile Include="Battle_GUI_GO.cpp">
+      <Filter>Pirates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -209,6 +212,9 @@
       <Filter>Pirates</Filter>
     </ClInclude>
     <ClInclude Include="EnemyShip_BattleMap_GO.h">
+      <Filter>Pirates</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle_GUI_GO.h">
       <Filter>Pirates</Filter>
     </ClInclude>
   </ItemGroup>
