@@ -1,5 +1,7 @@
 #pragma once
 
+#include <algorithm> 
+
 #include "Component.h"
 
 #include "PlayerShip_BattleMap_GO.h"
