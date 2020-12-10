@@ -72,7 +72,6 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
         self->velocity.x = -sin(self->angle * PI / 180);
         self->velocity.y = cos(self->angle * PI / 180);
 
-        //self->render->setRotation(-angle);
 
         /**
         float xForce = xDirection - self->velocity.x;
