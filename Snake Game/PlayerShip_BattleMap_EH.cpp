@@ -52,9 +52,12 @@ void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
                 y = v->f;
             }
         }
-        self->target.x = x;
-        self->target.y = y;
-        self->targeting = true;
+        if (x < Battle_GUI_GO::battleMap_Right && x > Battle_GUI_GO::battleMap_Left && y > Battle_GUI_GO::battleMap_Top && y < Battle_GUI_GO::battleMap_Bottom) {
+            self->target.x = x;
+            self->target.y = y;
+            self->targeting = true;
+        }
+        
     }
 
 }

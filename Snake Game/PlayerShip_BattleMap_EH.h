@@ -3,6 +3,7 @@
 #include "EventHandler.h"
 
 #include "PlayerShip_BattleMap_GO.h"
+#include "Battle_GUI_GO.h"
 
 class PlayerShip_BattleMap_GO;
 
