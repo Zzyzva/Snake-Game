@@ -100,6 +100,7 @@
     <ClCompile Include="Battle_GUI_GO.cpp">
       <Filter>Pirates</Filter>
     </ClCompile>
+    <ClCompile Include="Rock_BattleMap_GO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -202,6 +203,7 @@
     <ClInclude Include="Battle_GUI_GO.h">
       <Filter>Pirates</Filter>
     </ClInclude>
+    <ClInclude Include="Rock_BattleMap_GO.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Snake">

@@ -10,8 +10,28 @@ PlayerShip_BattleMap_COMP::PlayerShip_BattleMap_COMP(Scene* scene, PlayerShip_Ba
 void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
 
 
+    for (auto entry : *scene->getObjects()) {
+        GameObject* other = entry.second;
+        if (other->collider->isSolid() && other != self) {
+            int step = 20;
+            for (int i = 0; i < 8; i++) {
+                float tempx = self->velocity.x * i * step + self->collider->getX();
+                float tempy = self->velocity.y * i * step + self->collider->getY();
+                if (tempx > other->collider->getLeft() && tempx < other->collider->getRight() && tempy < other->collider->getBottom() && tempy > other->collider->getTop()) {
+                    std::cout << "You're gonna crash!" << std::endl;
+                    break;
+                }
+            }
+            
+        }
 
+    }
+
+
+    //If the ship has a target
     if (self->targeting) {
+
+        //Find the angle that would point at the target
         float xDirection = self->target.x - self->collider->getX();
         float yDirection = self->target.y - self->collider->getY();
 
@@ -20,9 +40,9 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
         xDirection /= mag;
         yDirection /= mag;
 
-
         int targetAngle = atan(xDirection / yDirection) * 180 / PI;
 
+        //Adjust the angle to coord space
         if (yDirection >= 0) {
             targetAngle += 180;
         }
@@ -34,6 +54,8 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
             targetAngle += 360;
         }
         
+        //Check if target angle is left or right of current angle
+        //First adjust all angles to 180 reference
         int actualTemp = self->angle;
         if (targetAngle > 180) {  
             actualTemp -= targetAngle - 180;
@@ -48,6 +70,8 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
         if (actualTemp < 0) {
             actualTemp += 360;
         }
+        
+        //Then check if left or right
         int angleChange = 0;
         if (actualTemp < 180) {
             angleChange = -1;
@@ -55,12 +79,8 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
         if (actualTemp > 180) {
             angleChange = 1;
         }
-       
 
-
-        
-       
-
+        //Set new angle PUT THIS IN AN EVENT
         self->angle += angleChange;
         if (self->angle >= 360) {
             self->angle -= 360;
@@ -69,38 +89,10 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
             self->angle += 360;
         }
 
+        //Set new velocity
         self->velocity.x = -sin(self->angle * PI / 180);
         self->velocity.y = cos(self->angle * PI / 180);
 
-
-        /**
-        float xForce = xDirection - self->velocity.x;
-        float yForce = yDirection - self->velocity.y;
-        
-        
-
-        float mag2 = sqrt(xForce * xForce + yForce * yForce);
-        if (mag2 > .02) {
-            xForce /= mag2;
-            yForce /= mag2;
-
-            xForce *= .02;
-            yForce *= .02;
-        }
-        std::cout << yForce << " " << xForce << std::endl;
-
-        float newXVelocity = self->velocity.x + xForce;
-        float newYVelocity = self->velocity.y + yForce;
-
-        
-        float mag3 = sqrt(newXVelocity * newXVelocity + newYVelocity * newYVelocity);
-
-        newXVelocity /= mag3;
-        newYVelocity /= mag3;
-        
-        self->velocity.x = newXVelocity;
-        self->velocity.y = newYVelocity;
-        */
     }
     
     float tempx = self->velocity.x * self->speed * deltaTime + self->collider->getX();

@@ -181,6 +181,7 @@
     <ClCompile Include="PlayerShip_BattleMap_GO.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RealTimeline.cpp" />
+    <ClCompile Include="Rock_BattleMap_GO.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="Timeline.cpp" />
@@ -217,6 +218,7 @@
     <ClInclude Include="Point.h" />
     <ClInclude Include="RealTimeline.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Rock_BattleMap_GO.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="Timeline.h" />
