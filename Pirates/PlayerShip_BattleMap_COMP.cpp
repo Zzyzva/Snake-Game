@@ -15,9 +15,11 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
         if (other->collider->isSolid() && other != self) {
             int step = 20;
             for (int i = 0; i < 8; i++) {
-                float tempx = self->velocity.x * i * step + self->collider->getX();
-                float tempy = self->velocity.y * i * step + self->collider->getY();
-                if (tempx > other->collider->getLeft() && tempx < other->collider->getRight() && tempy < other->collider->getBottom() && tempy > other->collider->getTop()) {
+                float tempLeft = self->velocity.x * i * step + self->collider->getLeft();
+                float tempRight = self->velocity.x * i * step + self->collider->getRight();
+                float tempTop = self->velocity.y * i * step + self->collider->getTop();
+                float tempBottom = self->velocity.y * i * step + self->collider->getBottom();
+                if (tempLeft < other->collider->getRight() && tempRight > other->collider->getLeft() && tempTop < other->collider->getBottom() && tempBottom > other->collider->getTop()) {
                     std::cout << "You're gonna crash!" << std::endl;
                     break;
                 }

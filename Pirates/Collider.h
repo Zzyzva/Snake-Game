@@ -16,6 +16,7 @@ class Collider
 	float speed = 0;
 	float xAdjust = 0;
 	float yAdjust = 0;
+	bool centerPOS = false;
 
 public:
 	Collider(float x, float y, int width, int height, bool solid) {
@@ -32,6 +33,14 @@ public:
 		this->solid = false;
 		this->width = 0;
 		this->height = 0;
+	}
+
+	bool isCenterOrigin() {
+		return centerPOS;
+	}
+
+	void setCenterOrigin(bool center) {
+		centerPOS = center;
 	}
 
 	bool isSolid() {
@@ -59,28 +68,48 @@ public:
 		this->posY = y;
 	}
 
-	float getLeft() {
-		return posX;
-	}
-
 	float getX() {
 		return posX;
-	}
-	
-	float getTop() {
-		return posY;
 	}
 
 	float getY() {
 		return posY;
 	}
 
+	float getLeft() {
+		if (!centerPOS) {
+			return posX;
+		}
+		else {
+			return posX - width / 2;
+		}
+	}
+	
+	float getTop() {
+		if (!centerPOS) {
+			return posY;
+		}
+		else {
+			return posY - height / 2;
+		}
+	}
+
 	float getRight() {
-		return posX + width;
+		if (!centerPOS) {
+			return posX + width;
+		}
+		else {
+			return posX + width - width / 2;
+		}
 	}
 
 	float getBottom() {
-		return posY + height;
+		if (!centerPOS) {
+			return posY + height;
+		}
+		else {
+			return posY + height - height / 2;
+		}
 	}
 
 	float getXVel() {

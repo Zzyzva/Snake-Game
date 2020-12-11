@@ -1,11 +1,12 @@
 #include "PlayerShip_BattleMap_GO.h"
 
-static constexpr int const& SPRITE_SIZE = 128;
+static constexpr int const& SPRITE_WIDTH = 24;
+static constexpr int const& SPRITE_HEIGHT = 48;
 
 PlayerShip_BattleMap_GO::PlayerShip_BattleMap_GO(Scene* scene, int id, int x, int y) {
     this->scene = scene;
     this->id = id;
-    collider = new Collider(x, y, SPRITE_SIZE, SPRITE_SIZE, true);
+    collider = new Collider(x, y, SPRITE_WIDTH, SPRITE_HEIGHT, true);
 
     //Set Sprite
     sf::RectangleShape* render = new sf::RectangleShape();
@@ -16,9 +17,10 @@ PlayerShip_BattleMap_GO::PlayerShip_BattleMap_GO(Scene* scene, int id, int x, in
     
     render->setTexture(&ship_texture);
     render->setPosition(x, y);
-    render->setSize(sf::Vector2f(SPRITE_SIZE, SPRITE_SIZE));
-    render->setOrigin(SPRITE_SIZE / 2, SPRITE_SIZE / 2);
+    render->setSize(sf::Vector2f(SPRITE_WIDTH, SPRITE_HEIGHT));
+    render->setOrigin(SPRITE_WIDTH / 2, SPRITE_HEIGHT / 2);
     render->setRotation(angle);
+    collider->setCenterOrigin(true);
     this->render = render;
 
 
