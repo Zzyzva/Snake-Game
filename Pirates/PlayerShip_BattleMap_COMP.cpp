@@ -19,8 +19,68 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
                 float tempRight = self->velocity.x * i * step + self->collider->getRight();
                 float tempTop = self->velocity.y * i * step + self->collider->getTop();
                 float tempBottom = self->velocity.y * i * step + self->collider->getBottom();
-                if (tempLeft < other->collider->getRight() && tempRight > other->collider->getLeft() && tempTop < other->collider->getBottom() && tempBottom > other->collider->getTop()) {
+                if (tempLeft < other->collider->getRight() 
+                    && tempRight > other->collider->getLeft() 
+                    && tempTop < other->collider->getBottom() 
+                    && tempBottom > other->collider->getTop()) {
                     std::cout << "You're gonna crash!" << std::endl;
+
+                    float tempx = self->velocity.x * i * step + self->collider->getX();
+                    float tempy = self->velocity.x * i * step + self->collider->getY();
+
+                    float other_tempx = other->collider->getX() + other->collider->getWidth() / 2;
+                    float other_tempy = other->collider->getY() + other->collider->getHeight() / 2;
+
+                    float angleChange = 0;
+                    int angleAdjust = 5;
+                    int count = 1;
+                    
+                    while (angleChange == 0) {
+                        angleAdjust *= -1;
+                        if (count % 2 == 0) {
+                            angleAdjust += 5;
+                        }
+                        float tempAngle = self->angle + angleAdjust;
+                        if (tempAngle >= 360) {
+                            tempAngle -= 360;
+                        }
+                        else if (tempAngle < 0) {
+                            tempAngle += 360;
+                        }
+
+                        if (angleAdjust > 180) {
+                            break;
+                        }
+
+                        float tempVelX = -sin(tempAngle * PI / 180);
+                        float tempVelY = cos(tempAngle * PI / 180);
+
+
+                        float tempLeft = tempVelX * i * step + self->collider->getLeft();
+                        float tempRight = tempVelX * i * step + self->collider->getRight();
+                        float tempTop = tempVelY * i * step + self->collider->getTop();
+                        float tempBottom = tempVelY * i * step + self->collider->getBottom();
+
+
+                        //If there is not a collision
+                        if (!(tempLeft < other->collider->getRight()
+                            && tempRight > other->collider->getLeft()
+                            && tempTop < other->collider->getBottom()
+                            && tempBottom > other->collider->getTop())) {
+
+                            if (angleAdjust > 0) {
+                                angleChange = 1;
+                                std::cout << "Turn Right!" << std::endl;
+                            }
+                            else {
+                                angleChange = -1;
+                                std::cout << "Turn Left!" << std::endl;
+                            }
+                        }
+                        count++;
+                    }
+
+
                     break;
                 }
             }
