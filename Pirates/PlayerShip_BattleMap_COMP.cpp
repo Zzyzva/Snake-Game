@@ -9,7 +9,7 @@ PlayerShip_BattleMap_COMP::PlayerShip_BattleMap_COMP(Scene* scene, PlayerShip_Ba
 
 void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
 
-
+    bool adjusting = false;
     for (auto entry : *scene->getObjects()) {
         GameObject* other = entry.second;
         if (other->collider->isSolid() && other != self) {
@@ -23,7 +23,7 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
                     && tempRight > other->collider->getLeft() 
                     && tempTop < other->collider->getBottom() 
                     && tempBottom > other->collider->getTop()) {
-                    std::cout << "You're gonna crash!" << std::endl;
+                    //std::cout << "You're gonna crash!" << std::endl;
 
                     float tempx = self->velocity.x * i * step + self->collider->getX();
                     float tempy = self->velocity.x * i * step + self->collider->getY();
@@ -70,28 +70,33 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
 
                             if (angleAdjust > 0) {
                                 angleChange = 1;
-                                std::cout << "Turn Right!" << std::endl;
+                                adjusting = true;
+                                //std::cout << "Turn Right!" << std::endl;
                             }
                             else {
                                 angleChange = -1;
-                                std::cout << "Turn Left!" << std::endl;
+                                adjusting = true;
+                                //std::cout << "Turn Left!" << std::endl;
                             }
                         }
                         count++;
                     }
-
-
+                    self->angle += angleChange;
+                    if (self->angle >= 360) {
+                        self->angle -= 360;
+                    }
+                    if (self->angle < 0) {
+                        self->angle += 360;
+                    }
                     break;
                 }
-            }
-            
+            } 
         }
-
     }
 
 
     //If the ship has a target
-    if (self->targeting) {
+    if (self->targeting && !adjusting) {
 
         //Find the angle that would point at the target
         float xDirection = self->target.x - self->collider->getX();
@@ -150,13 +155,11 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
         if (self->angle < 0) {
             self->angle += 360;
         }
-
-        //Set new velocity
-        self->velocity.x = -sin(self->angle * PI / 180);
-        self->velocity.y = cos(self->angle * PI / 180);
-
     }
     
+    self->velocity.x = -sin(self->angle * PI / 180);
+    self->velocity.y = cos(self->angle * PI / 180);
+
     float tempx = self->velocity.x * self->speed * deltaTime + self->collider->getX();
     float tempy = self->velocity.y * self->speed * deltaTime + self->collider->getY();
 
