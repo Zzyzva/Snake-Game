@@ -158,6 +158,7 @@
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="COMPSnake.cpp" />
+    <ClCompile Include="Crewmate_GO.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_COMP.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_EH.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_GO.cpp" />
@@ -184,6 +185,7 @@
     <ClCompile Include="Rock_BattleMap_GO.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Server.cpp" />
+    <ClCompile Include="Ship_GUI_GO.cpp" />
     <ClCompile Include="Timeline.cpp" />
     <ClCompile Include="Variant.cpp" />
     <ClCompile Include="variantENUM.cpp" />
@@ -194,6 +196,7 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="COMPSnake.h" />
+    <ClInclude Include="Crewmate_GO.h" />
     <ClInclude Include="EnemyShip_BattleMap_COMP.h" />
     <ClInclude Include="EnemyShip_BattleMap_EH.h" />
     <ClInclude Include="EnemyShip_BattleMap_GO.h" />
@@ -221,6 +224,7 @@
     <ClInclude Include="Rock_BattleMap_GO.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Server.h" />
+    <ClInclude Include="Ship_GUI_GO.h" />
     <ClInclude Include="Timeline.h" />
     <ClInclude Include="Variant.h" />
     <ClInclude Include="variantENUM.h" />
