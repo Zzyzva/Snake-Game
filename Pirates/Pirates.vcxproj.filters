@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="GOSnake.cpp">
-      <Filter>Snake</Filter>
-    </ClCompile>
     <ClCompile Include="Client.cpp">
       <Filter>Zzyzix</Filter>
     </ClCompile>
@@ -58,60 +55,47 @@
     <ClCompile Include="variantENUM.cpp">
       <Filter>Zzyzix</Filter>
     </ClCompile>
-    <ClCompile Include="COMPSnake.cpp">
-      <Filter>Snake</Filter>
-    </ClCompile>
-    <ClCompile Include="LISTENERSnake.cpp">
-      <Filter>Snake</Filter>
-    </ClCompile>
-    <ClCompile Include="LISTENERGameOver.cpp">
-      <Filter>Snake</Filter>
-    </ClCompile>
-    <ClCompile Include="GOGameOver.cpp">
-      <Filter>Snake</Filter>
-    </ClCompile>
-    <ClCompile Include="GOApple.cpp">
-      <Filter>Snake</Filter>
-    </ClCompile>
-    <ClCompile Include="LISTENERApple.cpp">
-      <Filter>Snake</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerShip_BattleMap_GO.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="PiratesClient.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerShip_BattleMap_COMP.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerShip_BattleMap_EH.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyShip_BattleMap_COMP.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyShip_BattleMap_EH.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyShip_BattleMap_GO.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="Battle_GUI_GO.cpp">
-      <Filter>Pirates</Filter>
-    </ClCompile>
-    <ClCompile Include="Rock_BattleMap_GO.cpp" />
     <ClCompile Include="Ship_GUI_GO.cpp">
       <Filter>Pirates\overview</Filter>
     </ClCompile>
     <ClCompile Include="Crewmate_GO.cpp">
       <Filter>Pirates\overview</Filter>
     </ClCompile>
+    <ClCompile Include="PiratesClient.cpp">
+      <Filter>Pirates\setup</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleMap_Setup.cpp">
+      <Filter>Pirates\setup</Filter>
+    </ClCompile>
+    <ClCompile Include="Battle_GUI_GO.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyShip_BattleMap_COMP.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyShip_BattleMap_EH.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyShip_BattleMap_GO.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerShip_BattleMap_COMP.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerShip_BattleMap_EH.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerShip_BattleMap_GO.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="Rock_BattleMap_GO.cpp">
+      <Filter>Pirates\battlemap</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipOverview_Setup.cpp">
+      <Filter>Pirates\setup</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GOSnake.h">
-      <Filter>Snake</Filter>
-    </ClInclude>
     <ClInclude Include="Client.h">
       <Filter>Zzyzix</Filter>
     </ClInclude>
@@ -166,61 +150,47 @@
     <ClInclude Include="variantENUM.h">
       <Filter>Zzyzix</Filter>
     </ClInclude>
-    <ClInclude Include="COMPSnake.h">
-      <Filter>Snake</Filter>
-    </ClInclude>
-    <ClInclude Include="LISTENERSnake.h">
-      <Filter>Snake</Filter>
-    </ClInclude>
-    <ClInclude Include="LISTENERGameOver.h">
-      <Filter>Snake</Filter>
-    </ClInclude>
-    <ClInclude Include="GOGameOver.h">
-      <Filter>Snake</Filter>
-    </ClInclude>
-    <ClInclude Include="GOApple.h">
-      <Filter>Snake</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="LISTENERApple.h">
-      <Filter>Snake</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerShip_BattleMap_GO.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="PiratesClient.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerShip_BattleMap_COMP.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerShip_BattleMap_EH.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyShip_BattleMap_COMP.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyShip_BattleMap_EH.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyShip_BattleMap_GO.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="Battle_GUI_GO.h">
-      <Filter>Pirates</Filter>
-    </ClInclude>
-    <ClInclude Include="Rock_BattleMap_GO.h" />
     <ClInclude Include="Ship_GUI_GO.h">
       <Filter>Pirates\overview</Filter>
     </ClInclude>
     <ClInclude Include="Crewmate_GO.h">
       <Filter>Pirates\overview</Filter>
     </ClInclude>
+    <ClInclude Include="PiratesClient.h">
+      <Filter>Pirates\setup</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleMap_Setup.h">
+      <Filter>Pirates\setup</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle_GUI_GO.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyShip_BattleMap_COMP.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyShip_BattleMap_EH.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyShip_BattleMap_GO.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerShip_BattleMap_COMP.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerShip_BattleMap_EH.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerShip_BattleMap_GO.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="Rock_BattleMap_GO.h">
+      <Filter>Pirates\battlemap</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipOverview_Setup.h">
+      <Filter>Pirates\setup</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Snake">
-      <UniqueIdentifier>{41ee517b-ec2f-4a03-a788-9f56889038e8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Zzyzix">
       <UniqueIdentifier>{d4a5db34-6ed7-4e09-9974-4396366b88a8}</UniqueIdentifier>
     </Filter>
@@ -233,9 +203,12 @@
     <Filter Include="Pirates\overview">
       <UniqueIdentifier>{217d058f-698f-4d98-9b0a-ab393739d9c7}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Snake Game.rc" />
+    <Filter Include="Pirates\setup">
+      <UniqueIdentifier>{dc32df9a-39dd-4ef5-89a7-55f3ae791bb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pirates\battlemap">
+      <UniqueIdentifier>{e03df9f0-8848-4ccb-a137-1cb286229bb8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="scriptTest.js">

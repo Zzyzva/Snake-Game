@@ -153,11 +153,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BattleMap_Setup.cpp" />
     <ClCompile Include="Battle_GUI_GO.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
-    <ClCompile Include="COMPSnake.cpp" />
     <ClCompile Include="Crewmate_GO.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_COMP.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_EH.cpp" />
@@ -167,14 +167,8 @@
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameTimeline.cpp" />
-    <ClCompile Include="GOApple.cpp" />
-    <ClCompile Include="GOGameOver.cpp" />
-    <ClCompile Include="GOSnake.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="json.cpp" />
-    <ClCompile Include="LISTENERApple.cpp" />
-    <ClCompile Include="LISTENERGameOver.cpp" />
-    <ClCompile Include="LISTENERSnake.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PiratesClient.cpp" />
     <ClCompile Include="PlayerShip_BattleMap_COMP.cpp" />
@@ -185,17 +179,18 @@
     <ClCompile Include="Rock_BattleMap_GO.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Server.cpp" />
+    <ClCompile Include="ShipOverview_Setup.cpp" />
     <ClCompile Include="Ship_GUI_GO.cpp" />
     <ClCompile Include="Timeline.cpp" />
     <ClCompile Include="Variant.cpp" />
     <ClCompile Include="variantENUM.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BattleMap_Setup.h" />
     <ClInclude Include="Battle_GUI_GO.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
-    <ClInclude Include="COMPSnake.h" />
     <ClInclude Include="Crewmate_GO.h" />
     <ClInclude Include="EnemyShip_BattleMap_COMP.h" />
     <ClInclude Include="EnemyShip_BattleMap_EH.h" />
@@ -205,14 +200,8 @@
     <ClInclude Include="EventManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameTimeline.h" />
-    <ClInclude Include="GOApple.h" />
-    <ClInclude Include="GOGameOver.h" />
-    <ClInclude Include="GOSnake.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="json.h" />
-    <ClInclude Include="LISTENERApple.h" />
-    <ClInclude Include="LISTENERGameOver.h" />
-    <ClInclude Include="LISTENERSnake.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="PiratesClient.h" />
     <ClInclude Include="PlayerShip_BattleMap_COMP.h" />
@@ -220,17 +209,14 @@
     <ClInclude Include="PlayerShip_BattleMap_GO.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="RealTimeline.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Rock_BattleMap_GO.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Server.h" />
+    <ClInclude Include="ShipOverview_Setup.h" />
     <ClInclude Include="Ship_GUI_GO.h" />
     <ClInclude Include="Timeline.h" />
     <ClInclude Include="Variant.h" />
     <ClInclude Include="variantENUM.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Snake Game.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="scriptTest.js" />
