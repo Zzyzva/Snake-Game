@@ -101,6 +101,12 @@
       <Filter>Pirates</Filter>
     </ClCompile>
     <ClCompile Include="Rock_BattleMap_GO.cpp" />
+    <ClCompile Include="Ship_GUI_GO.cpp">
+      <Filter>Pirates\overview</Filter>
+    </ClCompile>
+    <ClCompile Include="Crewmate_GO.cpp">
+      <Filter>Pirates\overview</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -204,6 +210,12 @@
       <Filter>Pirates</Filter>
     </ClInclude>
     <ClInclude Include="Rock_BattleMap_GO.h" />
+    <ClInclude Include="Ship_GUI_GO.h">
+      <Filter>Pirates\overview</Filter>
+    </ClInclude>
+    <ClInclude Include="Crewmate_GO.h">
+      <Filter>Pirates\overview</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Snake">
@@ -217,6 +229,9 @@
     </Filter>
     <Filter Include="Pirates">
       <UniqueIdentifier>{eedca60b-44bd-4249-bb89-b90459268853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pirates\overview">
+      <UniqueIdentifier>{217d058f-698f-4d98-9b0a-ab393739d9c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
