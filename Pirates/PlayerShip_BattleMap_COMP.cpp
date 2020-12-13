@@ -163,7 +163,14 @@ void PlayerShip_BattleMap_COMP::update(long currentTime, long deltaTime) {
     float tempx = self->velocity.x * self->speed * deltaTime + self->collider->getX();
     float tempy = self->velocity.y * self->speed * deltaTime + self->collider->getY();
 
-    if (tempx < self->target.x + 5 && tempx > self->target.x - 5 && tempy < self->target.y + 5 && tempy > self->target.y) {
+    if (tempx < self->target.x + 40 && tempx > self->target.x - 40 && tempy < self->target.y + 40 && tempy > self->target.y - 40) {
+        if (self->speed > .02) {
+            self->speed -= .02;
+        } 
+    }
+
+    if (tempx < self->target.x + 5 && tempx > self->target.x - 5 && tempy < self->target.y + 5 && tempy > self->target.y - 5) {
+        self->speed = 0;
         self->targeting = false;
     }
 
