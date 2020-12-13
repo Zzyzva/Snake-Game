@@ -24,6 +24,9 @@ PlayerShip_BattleMap_GO::PlayerShip_BattleMap_GO(Scene* scene, int id, int x, in
     this->render = render;
 
 
+    addComponent(new ShipHealth_COMP(scene, this, 100));
+    new ShipHealth_EH(scene, this);
+
     addComponent(new PlayerShip_BattleMap_COMP(scene, this));
     new PlayerShip_BattleMap_EH(scene, this);
 
