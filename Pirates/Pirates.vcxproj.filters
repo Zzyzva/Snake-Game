@@ -107,6 +107,12 @@
     <ClCompile Include="Crewmate_GO.cpp">
       <Filter>Pirates\overview</Filter>
     </ClCompile>
+    <ClCompile Include="ShipHealth_COMP.cpp">
+      <Filter>Pirates\health</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipHealth_EH.cpp">
+      <Filter>Pirates\health</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GOSnake.h">
@@ -216,6 +222,12 @@
     <ClInclude Include="Crewmate_GO.h">
       <Filter>Pirates\overview</Filter>
     </ClInclude>
+    <ClInclude Include="ShipHealth_COMP.h">
+      <Filter>Pirates\health</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipHealth_EH.h">
+      <Filter>Pirates\health</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Snake">
@@ -232,6 +244,9 @@
     </Filter>
     <Filter Include="Pirates\overview">
       <UniqueIdentifier>{217d058f-698f-4d98-9b0a-ab393739d9c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pirates\health">
+      <UniqueIdentifier>{66ecb83e-1880-4fd2-a345-5ae45a3b11f0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

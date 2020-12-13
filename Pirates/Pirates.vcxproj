@@ -185,6 +185,8 @@
     <ClCompile Include="Rock_BattleMap_GO.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Server.cpp" />
+    <ClCompile Include="ShipHealth_COMP.cpp" />
+    <ClCompile Include="ShipHealth_EH.cpp" />
     <ClCompile Include="Ship_GUI_GO.cpp" />
     <ClCompile Include="Timeline.cpp" />
     <ClCompile Include="Variant.cpp" />
@@ -224,6 +226,8 @@
     <ClInclude Include="Rock_BattleMap_GO.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Server.h" />
+    <ClInclude Include="ShipHealth_COMP.h" />
+    <ClInclude Include="ShipHealth_EH.h" />
     <ClInclude Include="Ship_GUI_GO.h" />
     <ClInclude Include="Timeline.h" />
     <ClInclude Include="Variant.h" />
