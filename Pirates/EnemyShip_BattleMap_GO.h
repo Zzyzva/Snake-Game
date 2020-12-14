@@ -13,10 +13,9 @@ class EnemyShip_BattleMap_GO : public GameObject
 {   
     sf::Texture ship_texture;
     
-    public:
-    int angle = 160;
-    float speed = 0;
-    Point velocity;
-    
+public:
+
+    ShipMovement_BattleMap_COMP* movement;
+
     EnemyShip_BattleMap_GO( Scene* scene, int id, int x, int y );
 };

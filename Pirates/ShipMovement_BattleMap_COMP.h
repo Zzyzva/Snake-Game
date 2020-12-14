@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm> 
+#include <queue>
 
 #include "Component.h"
 
@@ -21,7 +22,10 @@ public:
     float speed = 0;
     Point velocity;
     Point target;
+    std::queue<Point> targetQueue;
     bool targeting = false;
+    bool pathing = false;
+
 
     ShipMovement_BattleMap_COMP(Scene* scene, GameObject* self);
 

@@ -5,10 +5,32 @@ EnemyShip_BattleMap_EH::EnemyShip_BattleMap_EH( Scene* scene, EnemyShip_BattleMa
     this->self = self;
     
     scene->eventManager->registerHandler( "SpacePressed", this );
-    scene->eventManager->registerHandler( "EnemyShip_BattleMap_Move", this );
+    scene->eventManager->registerHandler( "ShipMovement" + self->id, this );
 }
 
 void EnemyShip_BattleMap_EH::handleEvent( Event* e ) {
+    if (e->getName().compare("ShipMovement" + self->id) == 0) {
+        float x = 0;
+        float y = 0;
+        int angle = 0;
+        std::vector<Variant*>* list = e->getParams();
+        for (Variant* v : *list) {
+            if (v->name.compare("x") == 0) {
+                x = v->f;
+            }
+            else if (v->name.compare("y") == 0) {
+                y = v->f;
+            }
+            else if (v->name.compare("angle") == 0) {
+                angle = v->i;
+            }
+        }
+        self->collider->setPosition(x, y);
+        self->collider->setAngle(angle);
+    }
+
+
+    /**
     if( e->getName().compare( "SpacePressed" ) == 0 ) {
         if( self->angle >= 180 ) {
             self->angle = self->angle - 180;
@@ -31,4 +53,5 @@ void EnemyShip_BattleMap_EH::handleEvent( Event* e ) {
         }
         self->collider->setPosition( x, y );
     }
+    */
 }

@@ -8,6 +8,8 @@ EnemyShip_BattleMap_COMP::EnemyShip_BattleMap_COMP( Scene* scene, EnemyShip_Batt
 }
 
 void EnemyShip_BattleMap_COMP::update( long currentTime, long deltaTime ) {
+
+    /**
     // Set rotation
     self->render->setRotation( self->angle );
     
@@ -27,4 +29,5 @@ void EnemyShip_BattleMap_COMP::update( long currentTime, long deltaTime ) {
     v2->f = tempy;
     e->addParam(v2);
     scene->eventManager->raise(e);
+    */
 }

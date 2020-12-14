@@ -14,16 +14,24 @@ EnemyShip_BattleMap_GO::EnemyShip_BattleMap_GO( Scene* scene, int id, int x, int
         std::cout << "Failed to load enemy ship texture";
     }
     
+
+    collider->setAngle(160);
+
     render->setTexture( &ship_texture );
     render->setPosition( x,y );
     render->setSize(sf::Vector2f(SPRITE_SIZE, SPRITE_SIZE));
     render->setOrigin(SPRITE_SIZE / 2, SPRITE_SIZE / 2);
-    render->setRotation(angle);
+    render->setRotation(collider->getAngle());
     this->render = render;
     
-    addComponent( new ShipMovement_BattleMap_COMP( scene, this ) );
-    //new EnemyShip_BattleMap_EH( scene, this );
+    movement = new ShipMovement_BattleMap_COMP(scene, this);
+    movement->pathing = true;
+    movement->targeting = true;
+    movement->target = Point(1300, 500);
+    movement->targetQueue.push(Point(1300, 700));
+    movement->targetQueue.push(Point(1300, 500));
+    movement->speed = 1;
+    addComponent( movement );
+    new EnemyShip_BattleMap_EH( scene, this );
     
-    velocity.x = 0;
-    velocity.y = 0;
 }

@@ -167,17 +167,28 @@ void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
 
     float tempx = velocity.x * speed * deltaTime + self->collider->getX();
     float tempy = velocity.y * speed * deltaTime + self->collider->getY();
+    float mag = sqrt((tempx - target.x) * (tempx - target.x) + (tempy - target.y) * (tempy - target.y));
 
-    if (tempx < target.x + 40 && tempx > target.x - 40 && tempy < target.y + 40 && tempy > target.y - 40) {
-        if (speed > .02) {
-            speed -= .02;
-        } 
-    }
+    if (pathing = false) {
+        if (mag < 40) {
+            if (speed > .02) {
+                speed -= .02;
+            }
+        }
 
-    if (tempx < target.x + 5 && tempx > target.x - 5 && tempy < target.y + 5 && tempy > target.y - 5) {
-        speed = 0;
-        targeting = false;
+        if (mag < 4) {
+            speed = 0;
+            targeting = false;
+        }
     }
+    else {
+        if (mag < 4) {
+            target = targetQueue.front();
+            targetQueue.push(targetQueue.front());
+            targetQueue.pop();
+        }
+    }
+    
 
     int angle = atan(velocity.x / velocity.y) * 180 / PI;
 
@@ -187,7 +198,7 @@ void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
     self->render->setRotation(-angle);
 
     //Raise event to move ship 
-    Event* e = new Event("PlayerShip_BattleMap_Move", currentTime, scene->id);
+    Event* e = new Event("ShipMovement" + self->id, currentTime, scene->id);
     Variant* v1 = new Variant("x", VFLOAT);
     v1->f = tempx;
     e->addParam(v1);

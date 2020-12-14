@@ -4,16 +4,14 @@ PlayerShip_BattleMap_EH::PlayerShip_BattleMap_EH(Scene* scene, PlayerShip_Battle
     this->scene = scene;
     this->self = self;
 
-    scene->eventManager->registerHandler("ADown", this);
-    scene->eventManager->registerHandler("DDown", this);
-    scene->eventManager->registerHandler("PlayerShip_BattleMap_Move", this);
+    scene->eventManager->registerHandler("ShipMovement" + self->id, this);
     scene->eventManager->registerHandler("MouseLeftPressed", this);
 
     
 }
 
 void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
-    if (e->getName().compare("PlayerShip_BattleMap_Move") == 0) {
+    if (e->getName().compare("ShipMovement" + self->id) == 0) {
         float x = 0;
         float y = 0;
         int angle = 0;
