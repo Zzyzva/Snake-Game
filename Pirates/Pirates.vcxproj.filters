@@ -94,6 +94,12 @@
     <ClCompile Include="ShipOverview_Setup.cpp">
       <Filter>Pirates\setup</Filter>
     </ClCompile>
+    <ClCompile Include="ShipHealth_COMP.cpp">
+      <Filter>Pirates\health</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipHealth_EH.cpp">
+      <Filter>Pirates\health</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -189,6 +195,12 @@
     <ClInclude Include="ShipOverview_Setup.h">
       <Filter>Pirates\setup</Filter>
     </ClInclude>
+    <ClInclude Include="ShipHealth_COMP.h">
+      <Filter>Pirates\health</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipHealth_EH.h">
+      <Filter>Pirates\health</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Zzyzix">
@@ -203,6 +215,10 @@
     <Filter Include="Pirates\overview">
       <UniqueIdentifier>{217d058f-698f-4d98-9b0a-ab393739d9c7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pirates\health">
+      <UniqueIdentifier>{66ecb83e-1880-4fd2-a345-5ae45a3b11f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
     <Filter Include="Pirates\setup">
       <UniqueIdentifier>{dc32df9a-39dd-4ef5-89a7-55f3ae791bb7}</UniqueIdentifier>
     </Filter>

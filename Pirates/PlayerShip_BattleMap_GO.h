@@ -5,6 +5,9 @@
 #include "PlayerShip_BattleMap_COMP.h"
 #include "PlayerShip_BattleMap_EH.h"
 
+#include "ShipHealth_COMP.h"
+#include "ShipHealth_EH.h"
+
 
 class PlayerShip_BattleMap_COMP;
 class PlayerShip_BattleMap_EH;
