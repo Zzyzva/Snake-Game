@@ -47,9 +47,19 @@ bool ShipHealth_COMP::getSunk()
     return sunk;
 }
 
+void ShipHealth_COMP::setSunk(bool sunk)
+{
+    this->sunk = sunk;
+}
+
 int ShipHealth_COMP::getWaterLevel()
 {
     return waterLevel;
+}
+
+void ShipHealth_COMP::setWaterLevel(int level)
+{
+    this->waterLevel = level;
 }
 
 int ShipHealth_COMP::getRate()
@@ -65,4 +75,14 @@ void ShipHealth_COMP::setRate( int rate )
 void ShipHealth_COMP::addToRate(int add)
 {
     this->rate += add;
+}
+
+int ShipHealth_COMP::getThreshold()
+{
+    return threshold;
+}
+
+void ShipHealth_COMP::setThreshold(int threshold)
+{
+    this->threshold = threshold;
 }

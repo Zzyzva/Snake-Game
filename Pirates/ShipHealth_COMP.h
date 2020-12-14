@@ -50,8 +50,17 @@ public:
      */
     void update(long currentTime, long deltaTime);
 
+    /**
+     * Returns the ship's threshold aka health
+     * 
+     * @return int - Value of the ship's threshold
+     */
     int getThreshold();
 
+    /**
+     * Sets the ship's water threshold
+     * @param threshold - New value for ship water threshold
+     */
     void setThreshold(int threshold);
 
     /**
@@ -61,6 +70,11 @@ public:
      */
     bool getSunk();
 
+    /**
+     * Sets the ship's sunk status
+     *
+     * @param sunk - New sunk status for the ship
+     */
     void setSunk(bool sunk);
 
     /**
@@ -70,6 +84,11 @@ public:
      */
     int getWaterLevel();
 
+    /**
+     * Sets the current water level of the ship
+     *
+     * @param level - New water level for the ship
+     */
     void setWaterLevel(int level);
 
     /**
