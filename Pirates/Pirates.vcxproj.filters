@@ -219,6 +219,7 @@
       <UniqueIdentifier>{66ecb83e-1880-4fd2-a345-5ae45a3b11f0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
     <Filter Include="Pirates\setup">
       <UniqueIdentifier>{dc32df9a-39dd-4ef5-89a7-55f3ae791bb7}</UniqueIdentifier>
     </Filter>
