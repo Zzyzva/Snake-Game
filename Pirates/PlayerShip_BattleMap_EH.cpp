@@ -13,19 +13,7 @@ PlayerShip_BattleMap_EH::PlayerShip_BattleMap_EH(Scene* scene, PlayerShip_Battle
 }
 
 void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
-    if (e->getName().compare("ADown") == 0) {
-        self->angle--;
-        if (self->angle < 0) {
-            self->angle = 359;
-        }
-    }
-    else if (e->getName().compare("DDown") == 0 ){
-        self->angle++;
-        if (self->angle >= 360) {
-            self->angle = 0;
-        }
-    }
-    else if (e->getName().compare("PlayerShip_BattleMap_Move") == 0) {
+    if (e->getName().compare("PlayerShip_BattleMap_Move") == 0) {
         float x = 0;
         float y = 0;
         std::vector<Variant*>* list = e->getParams();
@@ -56,6 +44,7 @@ void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
             self->target.x = x;
             self->target.y = y;
             self->targeting = true;
+            self->speed = 1;
         }
         
     }

@@ -19,24 +19,27 @@ public:
 	int width; //Width of scene
 	float xAdjust; //Relative adjustment of scene
 	std::map<int, GameObject*>* objects; //All objects in the scene, sorted by their Unique id
-	int id;
-	int playbackXAdjust = 0;
-	int totalID = 0;
+	int id; //ID of the scene
+	int totalID = 0; //Next available ID
 
-	EventManager* eventManager;
+	EventManager* eventManager; //Event Manger for the scene
 
-	Scene* nextScene;
-	bool endScene = false;
+	Scene* nextScene; //Next scene, used for changing scenes
+	bool endScene = false;// True if the scene is about to change
 
 	Scene(int id, int width, int height); //Creates a new scene with an empty object map 
 
-	~Scene();
+	~Scene(); //Delets the scene
 
 	std::map<int, GameObject*>* getObjects(); //Returns the map of objects
 
 	void update(long currentTime, long deltaTime, EventManager* manager); //Updates all the objects in the scene;
 
-	void addObject(GameObject* o, int id);
+	void addObjectByID(GameObject* o, int id); //Adds an object to the given ID
+
+	void addObject(GameObject* o); //Adds an object to the next available ID
+
+	int getNextID(); //returns the next available ID
 
 	void loadScene(Scene* newScene);
 
