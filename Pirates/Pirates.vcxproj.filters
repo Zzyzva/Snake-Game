@@ -100,6 +100,9 @@
     <ClCompile Include="ShipHealth_EH.cpp">
       <Filter>Pirates\health</Filter>
     </ClCompile>
+    <ClCompile Include="HealthBar_GO.cpp">
+      <Filter>Pirates\overview</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -200,6 +203,9 @@
     </ClInclude>
     <ClInclude Include="ShipHealth_EH.h">
       <Filter>Pirates\health</Filter>
+    </ClInclude>
+    <ClInclude Include="HealthBar_GO.h">
+      <Filter>Pirates\overview</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
