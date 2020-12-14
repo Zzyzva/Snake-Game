@@ -79,9 +79,6 @@
     <ClCompile Include="EnemyShip_BattleMap_GO.cpp">
       <Filter>Pirates\battlemap</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerShip_BattleMap_COMP.cpp">
-      <Filter>Pirates\battlemap</Filter>
-    </ClCompile>
     <ClCompile Include="PlayerShip_BattleMap_EH.cpp">
       <Filter>Pirates\battlemap</Filter>
     </ClCompile>
@@ -102,6 +99,9 @@
     </ClCompile>
     <ClCompile Include="HealthBar_GO.cpp">
       <Filter>Pirates\overview</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipMovement_BattleMap_COMP.cpp">
+      <Filter>Pirates\battlemap</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -183,9 +183,6 @@
     <ClInclude Include="EnemyShip_BattleMap_GO.h">
       <Filter>Pirates\battlemap</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerShip_BattleMap_COMP.h">
-      <Filter>Pirates\battlemap</Filter>
-    </ClInclude>
     <ClInclude Include="PlayerShip_BattleMap_EH.h">
       <Filter>Pirates\battlemap</Filter>
     </ClInclude>
@@ -206,6 +203,9 @@
     </ClInclude>
     <ClInclude Include="HealthBar_GO.h">
       <Filter>Pirates\overview</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipMovement_BattleMap_COMP.h">
+      <Filter>Pirates\battlemap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -16,6 +16,7 @@ void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
     if (e->getName().compare("PlayerShip_BattleMap_Move") == 0) {
         float x = 0;
         float y = 0;
+        int angle = 0;
         std::vector<Variant*>* list = e->getParams();
         for (Variant* v : *list) {
             if (v->name.compare("x") == 0) {
@@ -24,9 +25,12 @@ void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
             else if (v->name.compare("y") == 0) {
                 y = v->f;
             }
-            
+            else if (v->name.compare("angle") == 0) {
+                angle = v->i;
+            }  
         }
         self->collider->setPosition(x, y);
+        self->collider->setAngle(angle);
     }
     else if (e->getName().compare("MouseLeftPressed") == 0) {
         float x = 0;
@@ -39,12 +43,13 @@ void PlayerShip_BattleMap_EH::handleEvent(Event* e) {
             else if (v->name.compare("y") == 0) {
                 y = v->f;
             }
+            
         }
         if (x < Battle_GUI_GO::battleMap_Right && x > Battle_GUI_GO::battleMap_Left && y > Battle_GUI_GO::battleMap_Top && y < Battle_GUI_GO::battleMap_Bottom) {
-            self->target.x = x;
-            self->target.y = y;
-            self->targeting = true;
-            self->speed = 1;
+            self->movement->target.x = x;
+            self->movement->target.y = y;
+            self->movement->targeting = true;
+            self->movement->speed = 1;
         }
         
     }

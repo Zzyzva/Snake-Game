@@ -56,7 +56,7 @@
 
 	void GameObject::draw(sf::RenderWindow* window) {
 		if (render) {
-			render->setPosition(collider->getRelativeX(), collider->getRelativeY());
+			render->setPosition(collider->getX(), collider->getY());
 			window->draw(*render);
 		}
 		

@@ -21,8 +21,8 @@ EnemyShip_BattleMap_GO::EnemyShip_BattleMap_GO( Scene* scene, int id, int x, int
     render->setRotation(angle);
     this->render = render;
     
-    addComponent( new EnemyShip_BattleMap_COMP( scene, this ) );
-    new EnemyShip_BattleMap_EH( scene, this );
+    addComponent( new ShipMovement_BattleMap_COMP( scene, this ) );
+    //new EnemyShip_BattleMap_EH( scene, this );
     
     velocity.x = 0;
     velocity.y = 0;

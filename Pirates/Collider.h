@@ -10,12 +10,11 @@ class Collider
 	float posY; //Top Y
 	int height;
 	int width;
+	int angle;
 	bool solid;
 	float xVel = 0;
 	float yVel = 0;
 	float speed = 0;
-	float xAdjust = 0;
-	float yAdjust = 0;
 	bool centerPOS = false;
 
 public:
@@ -133,28 +132,12 @@ public:
 		this->speed = speed;
 	}
 
-	float getXAdjust() {
-		return xAdjust;
+	int getAngle() {
+		return angle;
 	}
 
-	void setXAdjust(float xAdjust) {
-		this->xAdjust = xAdjust;
-	}
-
-	float getYAdjust() {
-		return yAdjust;
-	}
-
-	void setYAdjust(float yAdjust) {
-		this->yAdjust = yAdjust;
-	}
-
-	float getRelativeX() {
-		return posX + xAdjust;
-	}
-
-	float getRelativeY() {
-		return posY + yAdjust;
+	void setAngle(int angle) {
+		this->angle = angle;
 	}
 
 };
