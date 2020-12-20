@@ -159,7 +159,6 @@
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Crewmate_GO.cpp" />
-    <ClCompile Include="EnemyShip_BattleMap_COMP.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_EH.cpp" />
     <ClCompile Include="EnemyShip_BattleMap_GO.cpp" />
     <ClCompile Include="Event.cpp" />
@@ -183,6 +182,7 @@
     <ClCompile Include="ShipHealth_COMP.cpp" />
     <ClCompile Include="ShipHealth_EH.cpp" />
     <ClCompile Include="ShipOverview_Setup.cpp" />
+    <ClCompile Include="ShipWeapons_COMP.cpp" />
     <ClCompile Include="Ship_GUI_GO.cpp" />
     <ClCompile Include="Timeline.cpp" />
     <ClCompile Include="Variant.cpp" />
@@ -195,7 +195,6 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Crewmate_GO.h" />
-    <ClInclude Include="EnemyShip_BattleMap_COMP.h" />
     <ClInclude Include="EnemyShip_BattleMap_EH.h" />
     <ClInclude Include="EnemyShip_BattleMap_GO.h" />
     <ClInclude Include="Event.h" />
@@ -219,6 +218,7 @@
     <ClInclude Include="ShipHealth_COMP.h" />
     <ClInclude Include="ShipHealth_EH.h" />
     <ClInclude Include="ShipOverview_Setup.h" />
+    <ClInclude Include="ShipWeapons_COMP.h" />
     <ClInclude Include="Ship_GUI_GO.h" />
     <ClInclude Include="Timeline.h" />
     <ClInclude Include="Variant.h" />

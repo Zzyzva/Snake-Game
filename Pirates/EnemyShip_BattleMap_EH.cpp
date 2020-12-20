@@ -4,8 +4,8 @@ EnemyShip_BattleMap_EH::EnemyShip_BattleMap_EH( Scene* scene, EnemyShip_BattleMa
     this->scene = scene;
     this->self = self;
     
-    scene->eventManager->registerHandler( "SpacePressed", this );
     scene->eventManager->registerHandler( "ShipMovement" + self->id, this );
+    scene->eventManager->registerHandler("ShipMovement" + self->playerShipID, this);
 }
 
 void EnemyShip_BattleMap_EH::handleEvent( Event* e ) {
@@ -28,30 +28,25 @@ void EnemyShip_BattleMap_EH::handleEvent( Event* e ) {
         self->collider->setPosition(x, y);
         self->collider->setAngle(angle);
     }
-
-
-    /**
-    if( e->getName().compare( "SpacePressed" ) == 0 ) {
-        if( self->angle >= 180 ) {
-            self->angle = self->angle - 180;
-        }
-        else {
-            self->angle = self->angle + 180;
-        }
-    }
-    else if( e->getName().compare("EnemyShip_BattleMap_Move") == 0 ) {
+    else if (e->getName().compare("ShipMovement" + self->playerShipID) == 0) {
         float x = 0;
         float y = 0;
         std::vector<Variant*>* list = e->getParams();
-        for ( Variant* v : *list ) {
-            if ( v->name.compare( "x" ) == 0 ) {
+        for (Variant* v : *list) {
+            if (v->name.compare("x") == 0) {
                 x = v->f;
             }
-            else if ( v->name.compare( "y" ) == 0 ) {
+            else if (v->name.compare("y") == 0) {
                 y = v->f;
             }
         }
-        self->collider->setPosition( x, y );
+
+        if (self->weapons->inRange(x, y, 0, 45, 1000)) {
+            std::cout << "Sights on player" << std::endl;
+        }
+        
     }
-    */
+
+
+
 }

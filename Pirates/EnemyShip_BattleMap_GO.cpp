@@ -2,9 +2,10 @@
 
 static constexpr int const& SPRITE_SIZE = 128;
 
-EnemyShip_BattleMap_GO::EnemyShip_BattleMap_GO( Scene* scene, int id, int x, int y ) {
+EnemyShip_BattleMap_GO::EnemyShip_BattleMap_GO( Scene* scene, int id, int x, int y, int playerShipID ) {
     this->scene = scene;
     this->id = id;
+    this->playerShipID = playerShipID;
     
     collider = new Collider( x, y, SPRITE_SIZE, SPRITE_SIZE, true );
     
@@ -24,6 +25,7 @@ EnemyShip_BattleMap_GO::EnemyShip_BattleMap_GO( Scene* scene, int id, int x, int
     render->setRotation(collider->getAngle());
     this->render = render;
     
+    //Set up Movement COMP
     movement = new ShipMovement_BattleMap_COMP(scene, this);
     movement->pathing = true;
     movement->targeting = true;
@@ -32,6 +34,11 @@ EnemyShip_BattleMap_GO::EnemyShip_BattleMap_GO( Scene* scene, int id, int x, int
     movement->targetQueue.push(Point(1300, 500));
     movement->speed = 1;
     addComponent( movement );
+
+    //Set up Weapons COMP
+    weapons = new ShipWeapons_COMP(scene, this);
+    addComponent(weapons);
+
     new EnemyShip_BattleMap_EH( scene, this );
     
 }

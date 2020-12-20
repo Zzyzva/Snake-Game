@@ -14,6 +14,8 @@ ShipMovement_BattleMap_COMP::ShipMovement_BattleMap_COMP(Scene* scene, GameObjec
 void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
     int selfAngle = self->collider->getAngle();
     bool adjusting = false;
+
+    //Check each object if we will crash
     for (auto entry : *scene->getObjects()) {
         GameObject* other = entry.second;
         if (other->collider->isSolid() && other != self) {
@@ -23,11 +25,12 @@ void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
                 float tempRight = velocity.x * i * step + self->collider->getRight();
                 float tempTop = velocity.y * i * step + self->collider->getTop();
                 float tempBottom = velocity.y * i * step + self->collider->getBottom();
+
+                //If current path leads to a collision
                 if (tempLeft < other->collider->getRight() 
                     && tempRight > other->collider->getLeft() 
                     && tempTop < other->collider->getBottom() 
                     && tempBottom > other->collider->getTop()) {
-                    //std::cout << "You're gonna crash!" << std::endl;
 
                     float tempx = velocity.x * i * step + self->collider->getX();
                     float tempy = velocity.x * i * step + self->collider->getY();
@@ -39,6 +42,7 @@ void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
                     int angleAdjust = 5;
                     int count = 1;
                     
+                    //Check which way to turn
                     while (angleChange == 0) {
                         angleAdjust *= -1;
                         if (count % 2 == 0) {
@@ -152,7 +156,7 @@ void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
             angleChange = 1;
         }
 
-        //Set new angle PUT THIS IN AN EVENT
+        //Set new angle
         selfAngle += angleChange;
         if (selfAngle >= 360) {
             selfAngle -= 360;
@@ -169,7 +173,7 @@ void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
     float tempy = velocity.y * speed * deltaTime + self->collider->getY();
     float mag = sqrt((tempx - target.x) * (tempx - target.x) + (tempy - target.y) * (tempy - target.y));
 
-    if (pathing = false) {
+    if (pathing == false) {
         if (mag < 40) {
             if (speed > .02) {
                 speed -= .02;
@@ -189,13 +193,7 @@ void ShipMovement_BattleMap_COMP::update(long currentTime, long deltaTime) {
         }
     }
     
-
-    int angle = atan(velocity.x / velocity.y) * 180 / PI;
-
-    if (velocity.y >= 0) {
-        angle += 180;
-    }
-    self->render->setRotation(-angle);
+    self->render->setRotation(selfAngle - 180);
 
     //Raise event to move ship 
     Event* e = new Event("ShipMovement" + self->id, currentTime, scene->id);

@@ -17,8 +17,9 @@ public:
 
     static void battleMapSetup(Scene* scene) {
         scene->addObject(new Battle_GUI_GO(scene, scene->getNextID(), 0, 0));
+        int playerShipID = scene->getNextID();
         scene->addObject(new PlayerShip_BattleMap_GO(scene, scene->getNextID(), battleMap_Left + 100, battleMap_Top + 100));
-        scene->addObject(new EnemyShip_BattleMap_GO(scene, scene->getNextID(), 1300, battleMap_Top + 500));
+        scene->addObject(new EnemyShip_BattleMap_GO(scene, scene->getNextID(), 1300, battleMap_Top + 500, playerShipID));
         scene->addObject(new Rock_BattleMap_GO(scene, scene->getNextID(), battleMap_Left + 300, battleMap_Top + 300));
     }
 };

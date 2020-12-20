@@ -70,9 +70,6 @@
     <ClCompile Include="Battle_GUI_GO.cpp">
       <Filter>Pirates\battlemap</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyShip_BattleMap_COMP.cpp">
-      <Filter>Pirates\battlemap</Filter>
-    </ClCompile>
     <ClCompile Include="EnemyShip_BattleMap_EH.cpp">
       <Filter>Pirates\battlemap</Filter>
     </ClCompile>
@@ -103,6 +100,7 @@
     <ClCompile Include="ShipMovement_BattleMap_COMP.cpp">
       <Filter>Pirates\battlemap</Filter>
     </ClCompile>
+    <ClCompile Include="ShipWeapons_COMP.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -174,9 +172,6 @@
     <ClInclude Include="Battle_GUI_GO.h">
       <Filter>Pirates\battlemap</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyShip_BattleMap_COMP.h">
-      <Filter>Pirates\battlemap</Filter>
-    </ClInclude>
     <ClInclude Include="EnemyShip_BattleMap_EH.h">
       <Filter>Pirates\battlemap</Filter>
     </ClInclude>
@@ -207,6 +202,7 @@
     <ClInclude Include="ShipMovement_BattleMap_COMP.h">
       <Filter>Pirates\battlemap</Filter>
     </ClInclude>
+    <ClInclude Include="ShipWeapons_COMP.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Zzyzix">
